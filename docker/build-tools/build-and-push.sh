@@ -19,7 +19,8 @@ CONTAINER_CLI=${CONTAINER_CLI:-docker}
 
 HUB=${HUB:-msr.ci.mirantis.com/rsingh}
 DATE=$(date +%Y-%m-%dT%H-%M-%S)
-BRANCH=$(git rev-parse --abbrev-ref HEAD)
+#BRANCH=$(git rev-parse --abbrev-ref HEAD)
+BRANCH="release-1.4.11-patch"
 VERSION="${BRANCH}-${DATE}"
 
 ${CONTAINER_CLI} build --build-arg "ISTIO_TOOLS_BRANCH=${BRANCH}" -t "${HUB}/build-tools:${VERSION}" -t "${HUB}/build-tools:${BRANCH}-latest" .
