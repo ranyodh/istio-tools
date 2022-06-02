@@ -148,7 +148,7 @@ RUN tar -xzvf /tmp/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz -C /tmp
 RUN mv /tmp/hugo ${OUTDIR}/usr/bin
 
 # Helm
-ADD https://storage.googleapis.com/kubernetes-helm/helm-${HELM_VERSION}-linux-amd64.tar.gz /tmp
+ADD https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz /tmp
 RUN tar -xf /tmp/helm-${HELM_VERSION}-linux-amd64.tar.gz -C /tmp
 RUN mv /tmp/linux-amd64/helm ${OUTDIR}/usr/bin
 
@@ -275,7 +275,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3
 
 # Install pip
-RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+RUN curl "https://bootstrap.pypa.io/pip/3.5/get-pip.py" -o "get-pip.py"
 RUN python3 get-pip.py --no-wheel
 
 # Install Pyhton stuff

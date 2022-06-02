@@ -56,7 +56,7 @@ ifeq ($(BUILD_WITH_CONTAINER),1)
 export TARGET_OUT = /work/out/$(TARGET_ARCH)_$(TARGET_OS)
 CONTAINER_CLI ?= docker
 DOCKER_SOCKET_MOUNT ?= -v /var/run/docker.sock:/var/run/docker.sock
-IMG ?= gcr.io/istio-testing/build-tools:2019-10-25T16-21-08
+IMG ?= gcr.io/istio-testing/build-tools:release-1.4-2020-02-14T15-30-45
 UID = $(shell id -u)
 PWD = $(shell pwd)
 

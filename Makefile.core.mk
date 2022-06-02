@@ -31,5 +31,8 @@ containers:
 	@gcloud auth configure-docker -q	# enable docker to authenticate with gcr.io, needed for prow
 	@cd docker/build-tools && ./build-and-push.sh
 
+containers-build:
+	@cd docker/build-tools && ./build.sh
+
 include common/Makefile.common.mk
 include perf/stability/stability.mk
