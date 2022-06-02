@@ -102,7 +102,7 @@ RUN go get -ldflags="-s -w" github.com/grpc-ecosystem/grpc-gateway/protoc-gen-sw
 RUN go get -ldflags="-s -w" github.com/jstemmer/go-junit-report@${GO_JUNIT_REPORT_VERSION}
 RUN go get -ldflags="-s -w" sigs.k8s.io/kind@${KIND_VERSION}
 RUN go get -ldflags="-s -w" github.com/wadey/gocovmerge@${GOCOVMERGE_VERSION}
-RUN go get -ldflags="-s -w" github.com/fortio/fortio@${FORTIO_VERSION}
+RUN go get -ldflags="-s -w" github.com/fortio/fortio/releases/tag/${FORTIO_VERSION}
 RUN go get -ldflags="-s -w" github.com/imsky/junit-merger/src/junit-merger@${JUNIT_MERGER_VERSION}
 
 # Install latest version of Istio-owned tools in this release
