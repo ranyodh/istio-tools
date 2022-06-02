@@ -33,8 +33,7 @@ ENV ISTIO_TOOLS_BRANCH=${ISTIO_TOOLS_BRANCH}
 
 # Pinned versions of stuff we pull in
 ENV COUNTERFEITER_VERSION=v6.2.2
-#ENV FORTIO_VERSION=v1.3.1
-ENV FORTIO_VERSION=fd8f4a7177e9ea509f27105ae4e55e6c68ece6f7
+ENV FORTIO_VERSION=v1.3.1
 ENV GCR_AUTH_VERSION=1.5.0
 ENV GO_BINDATA_VERSION=6025e8de665b31fa74ab1a66f2cddd8c0abf887e
 ENV GO_JUNIT_REPORT_VERSION=af01ea7f8024089b458d804d5cdf190f962a9a0c
@@ -103,7 +102,7 @@ RUN go get -ldflags="-s -w" github.com/grpc-ecosystem/grpc-gateway/protoc-gen-sw
 RUN go get -ldflags="-s -w" github.com/jstemmer/go-junit-report@${GO_JUNIT_REPORT_VERSION}
 RUN go get -ldflags="-s -w" sigs.k8s.io/kind@${KIND_VERSION}
 RUN go get -ldflags="-s -w" github.com/wadey/gocovmerge@${GOCOVMERGE_VERSION}
-RUN go get -ldflags="-s -w" github.com/fortio/fortio@${FORTIO_VERSION}
+#RUN go get -ldflags="-s -w" github.com/fortio/fortio@${FORTIO_VERSION}
 RUN go get -ldflags="-s -w" github.com/imsky/junit-merger/src/junit-merger@${JUNIT_MERGER_VERSION}
 
 # Install latest version of Istio-owned tools in this release
